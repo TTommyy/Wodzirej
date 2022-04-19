@@ -22,4 +22,5 @@ int main(){
     w.dolacz(&f);
     w.dolacz(&c);
     w.uczestnicy();
+    w.uczestnicy(u::W);
 }    

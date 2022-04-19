@@ -195,11 +195,14 @@ class Koleczko{
 
     void wypisz()const{
         const Gracz* ptr=&wodzirej;
-        for(unsigned int i=0;i<size();i++){
+        //for(unsigned int i=0;i<size();i++){
+        //    ptr->wypisz();
+        //    ptr=ptr->get_left();
+        //}
+        do{
             ptr->wypisz();
             ptr=ptr->get_left();
-        }
-
+        }while(ptr!=&wodzirej);
 
     }
 
@@ -210,10 +213,15 @@ class Koleczko{
             
         }else{
         
-            for(unsigned int i=0;i<size();i++){
+            //for(unsigned int i=0;i<size();i++){
+            //    if(ptr->get_sex()==p) ptr->wypiszs();
+            //    ptr=ptr->get_right();
+            //}
+
+            do{
                 if(ptr->get_sex()==p) ptr->wypiszs();
                 ptr=ptr->get_right();
-            }
+            }while(ptr!=&wodzirej);
         }
     }
 
